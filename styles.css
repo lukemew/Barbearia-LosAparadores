@@ -1,0 +1,206 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #ffb300;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #000000;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.logo img {
+  display: block;
+  width: 320px;
+  height: 100px;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: #2a2a2a;
+}
+
+nav a {
+  padding: 1rem;
+  border-top: 1px solid #333;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #333;
+}
+
+.banner {
+  height: 180px;
+  background: url("https://via.placeholder.com/600x180?text=Banner+Barbearia")
+    center/cover no-repeat;
+  margin: 1rem;
+  border-radius: 8px;
+}
+
+.services {
+  border-top: 1px solid var(--accent-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.services h2 {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.service-text {
+  font-weight: 300;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.service-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.service-info {
+  padding: 0.5rem 1rem;
+}
+
+.service-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--accent-color);
+}
+
+.service-info p {
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+}
+
+.gallery {
+  border-top: 1px solid var(--accent-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+.gallery h2 {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 2fr));
+  gap: 10px;
+}
+
+.gallery-images img {
+  width: 140px;
+  height: 140px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background-color: #1e1e1e;
+  color: #aaa;
+  height: 22vh;
+}
+
+footer img {
+  padding: 1rem;
+  width: 30%;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.whatsapp-button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+@media (min-width: 600px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  nav a {
+    border-top: none;
+    border-right: 1px solid #333;
+  }
+
+  nav a:last-child {
+    border-right: none;
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbearia Los Aparadores de Grama</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./assets/logos/LosAparadores-logo5.png" alt="" />
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <nav id="mobile-menu">
+      <a href="#">Início</a>
+      <a href="#">Serviços</a>
+      <a href="#">Galeria</a>
+      <a href="#">Contato</a>
+    </nav>
+
+    <div class="banner"></div>
+
+    <section class="services">
+      <h2>Serviços</h2>
+      <div class="services-container">
+        <a href="#" class="service-card">
+          <img src="./assets/cortes/degrade.jpg" alt="Corte Masculino" />
+          <div class="service-info">
+            <h3>Corte Degradê Masculino</h3>
+            <p>Apenas R$30</p>
+          </div>
+        </a>
+
+        <a href="#" class="service-card">
+          <img src="./assets/cortes/barba.png" alt="Barba Completa" />
+          <div class="service-info">
+            <h3>Barba Completa</h3>
+            <p>Apenas R$25</p>
+          </div>
+        </a>
+
+        <a href="#" class="service-card">
+          <img src="./assets/cortes/combo.jpg" alt="Combo Corte + Barba" />
+          <div class="service-info">
+            <h3>Combo Corte + Barba</h3>
+            <p>R$50 o combo</p>
+          </div>
+        </a>
+
+        <a href="#" class="service-card">
+          <img src="./assets/cortes/social.jpg" alt="Combo Corte + Barba" />
+          <div class="service-info">
+            <h3>Corte Social</h3>
+            <p>R$25</p>
+          </div>
+        </a>
+      </div>
+      <h2 class="service-text">
+        Agende seu <br />
+        horário!
+      </h2>
+    </section>
+
+    <section class="gallery">
+      <h2>Nossa Barbearia</h2>
+      <div class="gallery-images">
+        <img src="./assets/ambiente/barbearia-03.jpeg" alt="Interior 3" />
+        <img src="./assets/ambiente/barbearia-02.jpg" alt="Interior 2" />
+        <img src="./assets/ambiente/barbearia-01.jpg" alt="Interior 1" />
+        <img src="./assets/ambiente/barbearia-04.png" alt="Interior 4" />
+      </div>
+    </section>
+
+    <footer>
+      <img src="./assets/logos/LosAparadores-logo3.png" alt="logo" />
+      &copy; 2025 Barbearia Los Aparadores de Grama. Todos os direitos
+      reservados.
+    </footer>
+
+    <!-- Botão WhatsApp -->
+    <a
+      class="whatsapp-button"
+      href="https://wa.me/5599999999999?text=Olá!+Gostaria+de+agendar+um+horário."
+      target="_blank"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+      />
+      Agendar
+    </a>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+      }
+    </script>
+  </body>
+</html>
