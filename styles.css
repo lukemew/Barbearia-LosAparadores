@@ -56,11 +56,28 @@ nav a:hover {
 }
 
 .banner {
-  height: 180px;
-  background: url("https://via.placeholder.com/600x180?text=Banner+Barbearia")
-    center/cover no-repeat;
+  overflow: hidden;
+  height: auto;
   margin: 1rem;
   border-radius: 8px;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 300px;
+  border-radius: 8px;
+  height: auto;
+}
+
+.banner-mobile {
+  display: block;
+  height: auto;
+}
+
+.banner-desktop {
+  display: none !important;
 }
 
 .services {
@@ -79,9 +96,15 @@ nav a:hover {
   color: var(--accent-color);
   font-size: 1.3rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .service-text {
+  border: 1px solid var(--accent-color);
+  border-radius: 20px;
+  padding: 0.5rem;
+  margin: 0 auto;
+  width: 10rem;
   font-weight: 300;
 }
 
@@ -286,10 +309,6 @@ footer img {
     font-size: 1rem;
   }
 
-  .gallery-images {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .gallery h2 {
     padding: 2rem;
   }
@@ -306,11 +325,20 @@ footer img {
   footer img {
     width: 15%;
   }
+
+  .banner-mobile {
+    display: none !important;
+  }
+
+  .banner-desktop {
+    display: block !important;
+    object-fit: cover;
+  }
 }
 
 @media (min-width: 1200px) {
   .gallery-images {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
   }
 
