@@ -42,6 +42,11 @@ nav {
   display: none;
   flex-direction: column;
   background-color: #2a2a2a;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 nav a {
@@ -225,6 +230,21 @@ footer img {
   margin-right: 8px;
 }
 
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 600px) {
   header {
     display: flex;
@@ -287,6 +307,11 @@ footer img {
 }
 
 @media (min-width: 900px) {
+  nav {
+    top: 0;
+    position: relative;
+  }
+
   .services-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
