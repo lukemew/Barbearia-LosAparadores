@@ -11,6 +11,11 @@ body {
   color: var(--text-color);
 }
 
+.no-js .scroll-fade {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
 header {
   display: flex;
   justify-content: space-between;
