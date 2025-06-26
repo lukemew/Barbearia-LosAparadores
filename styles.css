@@ -259,18 +259,8 @@ html {
     align-items: center;
   }
 
-  .menu-toggle {
-    display: none; /* Esconde o botão hamburguer em telas grandes */
-  }
 
-  nav {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-    background-color: transparent;
-  }
+  
 
   nav a {
     padding: 0.5rem 1rem;
@@ -307,9 +297,23 @@ html {
 }
 
 @media (min-width: 900px) {
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+  }
+
   nav {
     top: 0;
     position: relative;
+  }
+
+  .menu-toggle {
+    display: none;
   }
 
   .services-container {
